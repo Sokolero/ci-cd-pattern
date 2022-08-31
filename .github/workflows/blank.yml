@@ -46,7 +46,7 @@ jobs:
           options: ''
           ssh_options: ''
           src: '/index.html'
-          dest: 'sr001@83.220.170.21:/var/www'
+          dest: 'sr001@83.220.170.21:/var/www/app'
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
