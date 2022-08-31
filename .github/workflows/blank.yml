@@ -45,7 +45,7 @@ jobs:
           flags: '-avzr --delete'
           options: ''
           ssh_options: ''
-          src: 'public/'
+          src: '/'
           dest: 'sr001@83.220.170.21:/var/www/server.com'
 
       - name: Display status from deploy
