@@ -45,8 +45,8 @@ jobs:
           flags: '-avzr --delete'
           options: ''
           ssh_options: ''
-          src: '/'
-          dest: 'sr001@83.220.170.21:/var/www/server.com'
+          src: '/index.html'
+          dest: 'sr001@83.220.170.21:/var/www'
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
