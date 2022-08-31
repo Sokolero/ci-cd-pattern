@@ -36,3 +36,17 @@ jobs:
           echo test, and deploy your project.
           
       # Runs deploy changes on remote server
+      - name: Deploy to server
+        id: deploy
+        uses: Pendect/action-rsyncer@v1.1.0
+        env:
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        with:
+          flags: '-avzr --delete'
+          options: ''
+          ssh_options: ''
+          src: 'public/'
+          dest: 'sr001@83.220.170.21:/var/www/server.com'
+
+      - name: Display status from deploy
+        run: echo "${{ steps.deploy.outputs.status }}"
